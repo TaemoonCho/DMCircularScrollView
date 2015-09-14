@@ -26,7 +26,7 @@ typedef void(^DMCircularScrollViewPageChanged)(NSUInteger currentPageIndex,NSUIn
 @property (nonatomic,assign)    BOOL                                displayBorder;          // Display a green border around the scrollView
 @property (copy)                DMCircularScrollViewPageChanged     handlePageChange;       // Block to catch page change event
 
-@property (nonatomic, assign)   id                                  scrollViewDelegate;     // Delegate for passing through UIScrollView delegate calls
+@property (nonatomic, assign)   id<UIScrollViewDelegate>            scrollViewDelegate;     // Delegate for passing through UIScrollView delegate calls
 
 // Use this to setup DMCircularScrollView
 - (void) setPageCount:(NSUInteger) pageCount withDataSource:(DMCircularScrollViewDataSource) dataSource;
